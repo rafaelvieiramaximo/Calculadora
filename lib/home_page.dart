@@ -47,11 +47,11 @@ class _CalculatorPageState extends State<CalculatorPage> {
 
   void insertParenthesis() {
     setState(() {
-      if (display == '0'openParenthesis) {
-        display += ')';
+      if (display == '0' || display == '') {
+        display += '(';
         openParenthesis = false;
       } else {
-        display += '(';
+        display += ')';
         openParenthesis = true;
       }
     });
